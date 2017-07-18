@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+
+.logo {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.gallery-thumb {
+    max-height: 300px;
+    margin: 20px;
+}
