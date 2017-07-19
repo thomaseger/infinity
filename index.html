@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Thomas Eger // Fotos, Fotos, Fotos!</title>
+        <title>Thomas Eger // Foto fokussiert!</title>
         <link rel="stylesheet" href="static-css/index.css" />  
         <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
         <script>
@@ -11,7 +11,7 @@
             }).then(function(data) {
                 data.map(function (image) {
                     if(image.alt_text === "Galerie Bild") {
-                      var html = '<img class="gallery-thumb" src="'+image.source_url+'" />';       
+                      var html = '<div class="gallery-thumb-wrapper"><img class="gallery-thumb" src="'+image.source_url+'" /></div>';       
                       $('#gallery').append(html);  
                     }
                 });

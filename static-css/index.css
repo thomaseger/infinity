@@ -9,8 +9,14 @@ body {
 }
 
 .gallery-thumb {
-    max-height: 300px;
-    margin: 20px;
+    max-height: 800px;
+    margin: 80px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid white;
+}
+
+.gallery-thumb-wrapper {
+	display: block;
 }
 
 #loader {
