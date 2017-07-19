@@ -5,17 +5,46 @@ body {
     color: gray;
 }
 
+.text {
+    width: 60%;
+    text-align: left;
+    font-weight: normal;
+    font-size: smaller;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: block;
+    line-height: 150%;
+}
+
+.text h1 {
+    font-weight: normal;
+}
+
+.text img {
+    max-width: 100%;
+}
+
+.selfie {
+    width: 33%;
+    float: right;
+    padding-left: 30px;
+}
+
 .logo {
     max-width: 200px;
     max-height: 200px;
     margin: 20px;
 }
 
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid white;
+}
+
 .gallery-thumb {
     max-height: 100%;
     max-width: 100%;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	border: 1px solid white;
 }
 
 .gallery-thumb-wrapper {
@@ -40,5 +69,9 @@ body {
 }
 
 #menu a:hover {
+    text-decoration: underline;
+}
+
+#menu a:active {
     text-decoration: underline;
 }

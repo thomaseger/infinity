@@ -11,7 +11,7 @@
             }).then(function(data) {
                 data.map(function (image) {
                     if(image.alt_text === "Galerie Bild") {
-                      var html = '<div class="gallery-thumb-wrapper"><img class="gallery-thumb" src="'+image.source_url+'" /></div>';       
+                      var html = '<div class="gallery-thumb-wrapper"><img class="gallery-thumb shadow" src="'+image.source_url+'" /></div>';       
                       $('#gallery').append(html);  
                     }
                 });
@@ -28,7 +28,7 @@
                 <img src="static-img/logo_500.png" alt="Thomas Eger" class="logo"/>
             </div>
             <div id="menu">
-                <a href="http://www.thomaseger.de/wordpress/ueber-mich/" target="_blank">&Uuml;ber mich</a> // <a href="http://www.thomaseger.de/wordpress/kontakt/" target="_blank">Kontakt</a> // <a href="https://www.instagram.com/thomas_eger/"  target="_blank">Instagram</a>
+               <a href="index.html">Fotos</a> // <a href="about.html">&Uuml;ber mich</a> // <a href="https://www.instagram.com/thomas_eger/"  target="_blank">Instagram</a>
             </div>
             <div id="gallery">
             </div>
