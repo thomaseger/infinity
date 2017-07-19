@@ -1,5 +1,8 @@
 body {
     text-align: center;
+    font-family: sans-serif;
+    font-size: 12pt;
+    color: gray;
 }
 
 .logo {
@@ -21,6 +24,21 @@ body {
 }
 
 #loader {
-    max-width: 30px;
     margin-top: 80px;
+}
+
+#menu {
+    display: block;
+    color: #000066;
+}
+
+#menu a {
+    color:gray;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#menu a:hover {
+    text-decoration: underline;
 }

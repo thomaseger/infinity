@@ -5,7 +5,7 @@
         <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
         <script>
         $(document).ready(function() {
-            $('#gallery').append('<img id="loader" src="static-img/loader.gif"/>');
+            $('body').append('<div id="loader">Lade Fotos ... </div>');
             $.ajax({
                 url: "http://www.thomaseger.de/wordpress/wp-json/wp/v2/media?per_page=100"
             }).then(function(data) {
@@ -26,6 +26,9 @@
         <div id="container">
             <div id="header">
                 <img src="static-img/logo_500.png" alt="Thomas Eger" class="logo"/>
+            </div>
+            <div id="menu">
+                <a href="http://www.thomaseger.de/wordpress/ueber-mich/" target="_blank">&Uuml;ber mich</a> // <a href="http://www.thomaseger.de/wordpress/kontakt/" target="_blank">Kontakt</a> // <a href="https://www.instagram.com/thomas_eger/"  target="_blank">Instagram</a>
             </div>
             <div id="gallery">
             </div>
