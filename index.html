@@ -3,24 +3,41 @@
         <title>Thomas Eger // Foto fokussiert!</title>
         <link rel="stylesheet" href="static-css/index.css" />  
         <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
+       
         <script>
-        $(document).ready(function() {
-            $('#gallery').append('<img id="loader" src="static-img/loader.gif"/>');
-            $.ajax({
-                url: "http://www.thomaseger.de/wordpress/wp-json/wp/v2/media?per_page=100"
-            }).then(function(data) {
-                data.map(function (image) {
-                    if(image.alt_text === "Galerie Bild") {
-                      var html = '<div class="gallery-thumb-wrapper"><img class="gallery-thumb" src="'+image.source_url+'" /></div>';       
-                      $('#gallery').append(html);  
-                    }
+            $(document).ready(function() {
+                $('#gallery').append('<img id="loader" src="static-img/loader.gif"/>');
+                $.ajax({
+                    url: "http://www.thomaseger.de/wordpress/wp-json/wp/v2/media?per_page=100"
+                }).then(function(data) {
+                    data.map(function (image) {
+                        if(image.alt_text === "Galerie Bild") {
+                          var html = '<div class="gallery-thumb-wrapper"><img class="gallery-thumb" src="'+image.source_url+'" /></div>';       
+                          $('#gallery').append(html);  
+                        }
+                    });
+                }).done(function(){
+                    $('#loader').remove();
                 });
-            }).done(function(){
-                $('#loader').remove();
             });
-        });
+            
+            
+            $(window).scroll( function(){
+                /* Check the location of each desired element */
+                $('.gallery-thumb-wrapper').each( function(){
+                    /* If the object is completely visible in the window, fade it it */
+                    if( $(this).offset().top > $(window).scrollTop() ){
+                       $(this).animate({'opacity':'1'},500);
+                    }
+
+                }); 
+            });
         </script>
 
+        
+
+        
+        
     </head>
     <body>
         <div id="container">
