@@ -1,5 +1,6 @@
 <html>
     <head>
+		<meta charset="UTF-8"> 
         <title>Thomas Eger // Foto fokussiert!</title>
         <link rel="stylesheet" href="static-css/index.css" />  
         <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
@@ -18,6 +19,18 @@
             }).done(function(){
                 $('#loader').remove();
             });
+			
+			$.ajax({
+                url: "menu.html",
+				dataType: "html",
+				error: function(xhr, error){
+					console.debug(xhr); 
+					console.debug(error);
+				}
+            }).then(function(links) {
+				$('#menu').append(links);
+            });
+
         });
         </script>
 
@@ -28,7 +41,6 @@
                 <img src="static-img/logo_500.png" alt="Thomas Eger" class="logo"/>
             </div>
             <div id="menu">
-               <a href="index.html">Fotos</a> // <a href="about.html">&Uuml;ber mich</a> // <a href="https://www.instagram.com/thomas_eger/"  target="_blank">Instagram</a>
             </div>
             <div id="gallery">
             </div>
