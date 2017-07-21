@@ -4,24 +4,15 @@
         <title>Thomas Eger // Foto fokussiert! // &Uuml;ber mich</title>
         <link rel="stylesheet" href="static-css/index.css" />  
 		<script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
+		<script src="static-js/structure.js"></script>
 		<script>
-		$.ajax({
-			url: "menu.html",
-			dataType: "html",
-			error: function(xhr, error){
-				console.debug(xhr); 
-				console.debug(error);
-			}
-		}).then(function(links) {
-			$('#menu').append(links);
+		$(document).ready(function(){
+			structure.header();
 		});
 		</script>
     </head>
     <body>
             <div id="header">
-                <img src="static-img/logo_500.png" alt="Thomas Eger" class="logo"/>
-            </div>
-            <div id="menu">
             </div>
             <div class="text shadow">
                 <p><img src="static-img/selfie.jpg" alt="Selfie" class="selfie"/></p>

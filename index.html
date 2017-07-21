@@ -4,6 +4,7 @@
         <title>Thomas Eger // Foto fokussiert!</title>
         <link rel="stylesheet" href="static-css/index.css" />  
         <script src="https://code.jquery.com/jquery-2.x-git.min.js"></script>
+		<script src="static-js/structure.js"></script>
         <script>
         $(document).ready(function() {
             $('body').append('<div id="loader">Lade Fotos ... </div>');
@@ -20,16 +21,7 @@
                 $('#loader').remove();
             });
 			
-			$.ajax({
-                url: "menu.html",
-				dataType: "html",
-				error: function(xhr, error){
-					console.debug(xhr); 
-					console.debug(error);
-				}
-            }).then(function(links) {
-				$('#menu').append(links);
-            });
+			structure.header();
 
         });
         </script>
@@ -38,10 +30,8 @@
     <body>
         <div id="container">
             <div id="header">
-                <img src="static-img/logo_500.png" alt="Thomas Eger" class="logo"/>
             </div>
-            <div id="menu">
-            </div>
+            
             <div id="gallery">
             </div>
         </div>
